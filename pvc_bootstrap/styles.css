@@ -1,0 +1,208 @@
+/* ============================================================
+   3D's PVC Innovative - CSS Personalizado sobre Bootstrap
+   WADE 1000L - Tarea de Assessment 5.1
+   ============================================================
+   Este archivo personaliza los estilos por defecto de Bootstrap
+   para adaptarlos a la identidad visual del negocio: paleta
+   oscura/dorada, tipografía Inter y un look minimalista.
+   ============================================================ */
+
+:root {
+  --color-primary: #1a1a2e;
+  --color-accent: #c8a96e;
+  --color-accent-dark: #a8854a;
+  --color-bg-light: #f8f8f6;
+  --color-text-muted: #6b6b6b;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #2d2d2d;
+}
+
+/* ============================================================
+   COLOR DE ACENTO PERSONALIZADO (reemplaza al primary de Bootstrap)
+   ============================================================ */
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+.bg-accent {
+  background-color: var(--color-accent) !important;
+  color: var(--color-primary) !important;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: var(--color-primary);
+}
+
+.btn-outline-accent {
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent-dark);
+  font-weight: 600;
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   NAVEGACIÓN
+   ============================================================ */
+
+.custom-navbar {
+  background-color: rgba(26, 26, 46, 0.95);
+  padding: 1rem 0;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--color-accent) !important;
+}
+
+/* ============================================================
+   HERO HEADER (página de inicio)
+   ============================================================ */
+
+.hero-header {
+  min-height: 90vh;
+  background:
+    linear-gradient(135deg, rgba(26, 26, 46, 0.85), rgba(15, 52, 96, 0.85)),
+    url('https://images.unsplash.com/photo-1556909114-44e3e70034e2?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  margin-top: -76px;
+  padding-top: 76px;
+}
+
+.hero-tag {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ============================================================
+   ENCABEZADO DE PÁGINAS SECUNDARIAS (proyectos, contacto, detalle)
+   ============================================================ */
+
+.page-header {
+  min-height: 35vh;
+  background: linear-gradient(135deg, var(--color-primary), #0f3460);
+  margin-top: -76px;
+  padding-top: 76px;
+}
+
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+
+.bg-light-section {
+  background-color: var(--color-bg-light);
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--color-primary), #0f3460);
+}
+
+/* ============================================================
+   TARJETAS DE SERVICIO (página de inicio)
+   ============================================================ */
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+}
+
+/* ============================================================
+   TARJETAS DE PROYECTOS (página de proyectos / blog)
+   ============================================================ */
+
+.proyecto-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.proyecto-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ============================================================
+   PÁGINA DE CONTACTO
+   ============================================================ */
+
+.contacto-info-box {
+  background-color: var(--color-primary);
+}
+
+.contacto-info-box p {
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.custom-footer {
+  background-color: var(--color-primary);
+}
+
+/* ============================================================
+   RESPONSIVO - Ajustes adicionales sobre el grid de Bootstrap
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .hero-header,
+  .page-header {
+    min-height: 60vh;
+  }
+
+  .hero-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-navbar .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
